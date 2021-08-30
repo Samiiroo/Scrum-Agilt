@@ -1,0 +1,35 @@
+$header-1: 4.125rem;
+$header-2: 2.5rem;
+$header-3: 2rem;
+$header-4: 1.44rem;
+
+body {
+  font-family: ;
+
+  .center {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  .left {
+    text-align: left;
+  }
+}
+h1 {
+  font-size: $header-1;
+}
+
+h2 {
+  font-size: $header-2;
+}
+
+h3 {
+  font-size: $header-3;
+}
+
+h4 {
+  font-size: $header-4;
+}
