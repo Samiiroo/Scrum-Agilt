@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './scss/_reset.scss';
 function App(props) {
   return (
     <>
