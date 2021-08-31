@@ -1,0 +1,20 @@
+.faq{
+	margin-bottom: 10px;
+}
+
+.faqs .faq .faq-answer {
+	opacity: 0;
+	max-height: 0;
+}
+
+.faq-answer{
+	margin-bottom: 10px;
+}
+.faqs .faq.open .faq-question {
+	margin-bottom: 5px;
+}
+
+.faqs .faq.open .faq-answer {
+	max-height: 1000px;
+	opacity: 1;
+}
