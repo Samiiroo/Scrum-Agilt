@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './scss/_reset.scss';
+import Header from './components/Header'
 function App(props) {
 
   useEffect(() => {
@@ -8,6 +9,7 @@ function App(props) {
 
   return (
     <>
+      <Header/>
       <main>
       </main>
     </>
