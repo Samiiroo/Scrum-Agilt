@@ -3,19 +3,23 @@
 // @import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
 
 // Fonts:
-
 $openSans: "Open Sans", sans-serif;
 $roboto: "Roboto", sans-serif;
 $passion: "Passion One", cursive;
 
 // Font-sizes:
-
 $header-1: 4.125rem;
 $header-2: 2.5rem;
 $header-3: 2rem;
 $header-4: 1.44rem;
+$p: 1.2rem;
 
 // Colour code:
+$bg: hsl(196, 100%, 97%);
+$bg-header: hsl(190, 100%, 29%);
+$bg-header-alternative: hsl(197, 100%, 36%);
+$font-colour: rgb(236, 233, 235);
+$font-on-hover: #262626;
 
 body {
   font-family: $roboto;
