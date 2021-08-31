@@ -4,7 +4,7 @@ function App(props) {
 
   useEffect(() => {
     document.title = 'Agile Tamam'
-  })
+  }, [])
 
   return (
     <>
