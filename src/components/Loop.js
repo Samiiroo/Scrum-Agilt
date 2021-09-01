@@ -1,19 +1,29 @@
 import React from 'react';
 
 function Loop(props) {
-
+  let list = [];
   let ListOfArticles = props.articles;
+  var movies = [
+    { title: 'The Godfather', rating: 9.2, release: '24 March 1972' },
+    { title: 'The Godfather: Part II', rating: 9.0, release: '20 December 1972' },
+    { title: 'The Shawshank Redemption', rating: 9.3, release: '14 October 1994' },
+  ];
+
   const displayLoop = () => {
-    console.log("props: ", props)
+    console.log("props: ", ListOfArticles)
     let filter = [];
 
     if (props.sort === 'asc') {
-      ListOfArticles.sort((a, b) => a.date - b.date)
-      console.log("ASC: ", ListOfArticles)
+      ListOfArticles.sort(function (a, b) {
+        var dateA = new Date(a.date), dateB = new Date(b.date);
+        return dateB - dateA;
+      });
     }
     else if (props.sort === 'desc') {
-      ListOfArticles.sort((a, b) => b.date - a.date)
-      console.log("DESC: ", ListOfArticles)
+      ListOfArticles.sort(function (a, b) {
+        var dateA = new Date(a.date), dateB = new Date(b.date);
+        return dateA - dateB;
+      });
     }
 
 
@@ -24,12 +34,6 @@ function Loop(props) {
     }
     else if (props.filter === 'articles') {
       filter = ListOfArticles.filter((article, key) => {
-        if (props.sort === 'asc') {
-          console.log("asc")
-        }
-        else if (props.sort === 'desc') {
-          console.log('desc')
-        }
         if (article.tags.length < 2) {
           return article.tags[0] === "artikel";
         }
@@ -40,7 +44,6 @@ function Loop(props) {
     }
     else {
       filter = props.articles;
-      console.log(filter)
     }
 
 
