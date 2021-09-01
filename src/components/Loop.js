@@ -38,16 +38,27 @@ function Loop(props) {
       console.log(filter)
     }
 
-    return filter.map((test, key) => <div key={key} className="demo">
-      <h2>{test.title}</h2>
-      <h3>{test.author}</h3>
-      <h4>{test.date}</h4>
-      <div className="tags">
-        {test.tag}
+    return filter.map((content, key) => <div key={key} className="content">
+      <h2>{content.title}</h2>
+      <a href="#">{content.readmore}</a>
+      <h4>{content.author}</h4>
+      <div className={`${content.tags.length <= 1 ? 'tag' : 'tags'}`}>
+        {loopTags(content.tags)}
       </div>
-    </div>)
-
+      <h4>{content.date}</h4>
+    </div>
+    )
   }
+
+  const loopTags = (tags) => {
+    let rows = []
+    for (let i = 0; i < tags.length; i++) {
+      rows.push(<span>{tags[i]}</span>);
+    }
+
+    return rows;
+  }
+
   return (
     <>
       {

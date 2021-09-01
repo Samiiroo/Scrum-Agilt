@@ -1,43 +1,44 @@
 {
   "articles": [
     {
-      "title": "Jordens IT jobb försvinner pga AI",
+      "title": "Earths IT jobbs are disappearing cause of AI",
+      "readmore": "read more...",
       "tags": [
-        "nyheter",
-        "artikel"
+        "news",
+        "article"
       ],
       "date": "2021-08-31",
       "author": "Samantha Smith"
     },
     {
-      "title": "Jordens IT jobb försvinner pga AI - del 2",
+      "title": "Earths IT jobbs are disappearing cause of AI - part 2",
       "tags": [
-        "nyheter",
-        "artikel"
+        "news",
+        "article"
       ],
       "date": "2021-09-01",
       "author": "Samantha Smith"
     },
     {
-      "title": "Varför folk hoppar av Rails tåget",
+      "title": "Why people jumping off the Rails train?",
       "tags": [
-        "artikel"
+        "article"
       ],
       "date": "2021-08-15",
       "author": "The doctor"
     },
     {
-      "title": "PHP 8.0 är ute nu",
+      "title": "PHP 8.0 out now!",
       "tags": [
-        "artikel"
+        "article"
       ],
       "date": "2021-08-14",
       "author": "The doctor"
     },
     {
-      "title": "Doctor Who S13 ute nu",
+      "title": "Doctor Who S13 out now",
       "tags": [
-        "artikel"
+        "article"
       ],
       "date": "2021-05-21",
       "author": "Rose Tyler"

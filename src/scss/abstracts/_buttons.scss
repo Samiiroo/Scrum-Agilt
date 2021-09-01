@@ -10,6 +10,18 @@
   }
 }
 
+@mixin btn-article {
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 1rem;
+  background-color: hsl(192, 60%, 55%);
+  color: hsl(320, 8%, 92%);
+  cursor: pointer;
+  &:first-child {
+    margin-right: 0.5rem;
+  }
+}
+
 @mixin btn-round {
   @include btn-default;
   width: calc(100% / 2);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Loop from './Loop';
 import '../scss/components/_articles.scss';
+import Loader from './Loader';
 function Articles(props) {
 
   const [articles, updateArticles] = useState(null);
@@ -11,7 +12,12 @@ function Articles(props) {
 
 
   const FetchArticlesData = async () => {
-    return await Axios.get('json/articles.json');
+    if (props.lang === 'en') {
+      return await Axios.get('json/article-en.json');
+    }
+    else {
+      return await Axios.get('json/article-sv.json');
+    }
   }
 
   useEffect(() => {
@@ -28,20 +34,20 @@ function Articles(props) {
   }, [])
 
   return (
-    <section className="articles">
+    <section className="articles" style={{ background: "url('/assets/img/article-bg.png') center/cover no-repeat" }}>
+      <h2 className="center">Nyheter & Artiklar</h2>
       <div className="filter-sort-container">
-        <div className="filter">
-          <h2>Filtrera: </h2>
+        <div className="filter center">
           <button className="btn news" onClick={() => updateFilter('news')}>Nyheter</button>
           <button className="btn articles" onClick={() => updateFilter('articles')}>Artiklar</button>
         </div>
-        <div class="sort">
-          <h2>Sortera: </h2>
+        <div class="sort center">
           <button className="btn asc" onClick={() => updateSort('asc')}>Senaste</button>
           <button className="btn desc" onClick={() => updateSort('desc')}>Äldst</button>
         </div>
 
       </div>
+      {isMounted && <Loader />}
       {
         articles !== null &&
         <div className="container-articles">
