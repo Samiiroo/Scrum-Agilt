@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { useState } from "react";
 import './scss/_reset.scss';
 import Faq from './components/Faq';
+import Wrap from './components/Wrap';
 import data from './components/data.json'
-import './scss/components/faq.css';
 
 function App(props) {
 
@@ -28,11 +28,13 @@ function App(props) {
   return (
     <>
       <main>
-        <div className="faqs">
-          {faqs.map((faq, i) => (
-            <Faq faq={faq} index={i} toggleFaq={toggleFaq} />
-          ))}
-        </div>
+        <Wrap>
+          <div>
+            {faqs.map((faq, i) => (
+              <Faq faq={faq} index={i} toggleFaq={toggleFaq} />
+            ))}
+          </div>
+        </Wrap>
       </main>
     </>
   );
