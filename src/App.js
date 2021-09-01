@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './scss/_reset.scss';
+import Articles from './components/Articles';
 function App(props) {
 
   useEffect(() => {
@@ -9,6 +10,7 @@ function App(props) {
   return (
     <>
       <main>
+        <Articles />
       </main>
     </>
   );
