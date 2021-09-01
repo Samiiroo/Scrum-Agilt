@@ -1,5 +1,12 @@
 @use "../abstracts/" as *;
 
 .about {
-  @include grid33(true);
+  .staff-container {
+    @include grid33(true);
+
+    .content {
+      @include flex-columns-center;
+      align-items: center;
+    }
+  }
 }
