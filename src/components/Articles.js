@@ -6,6 +6,8 @@ import Loader from './Loader';
 function Articles(props) {
 
   const [articles, updateArticles] = useState(null);
+  const [rest, updateRest] = useState(null);
+
   const [isMounted, updateIsMounted] = useState(true);
   const [filter, updateFilter] = useState('');
   const [sort, updateSort] = useState('');
@@ -26,6 +28,7 @@ function Articles(props) {
     }
     // Här hämtar vi data och sparar ner det/uppdaterar till vår useState 
     FetchArticlesData().then(res => {
+      updateRest(res.data.rest);
       updateArticles(res.data.articles);
 
       // Stäng av vår loader.
@@ -35,15 +38,15 @@ function Articles(props) {
 
   return (
     <section className="articles" style={{ background: "url('/assets/img/article-bg.png') center/cover no-repeat" }}>
-      <h2 className="center">Nyheter & Artiklar</h2>
+      <h2 className="center">{rest !== null && rest[0].title}</h2>
       <div className="filter-sort-container">
         <div className="filter center">
-          <button className="btn news" onClick={() => updateFilter('news')}>Nyheter</button>
-          <button className="btn articles" onClick={() => updateFilter('articles')}>Artiklar</button>
+          <button className="btn btn-news" onClick={() => updateFilter('news')}>Nyheter</button>
+          <button className="btn btn-articles" onClick={() => updateFilter('articles')}>Artiklar</button>
         </div>
         <div class="sort center">
-          <button className="btn asc" onClick={() => updateSort('asc')}>Senaste</button>
-          <button className="btn desc" onClick={() => updateSort('desc')}>Äldst</button>
+          <button className="btn btn-asc" onClick={() => updateSort('asc')}>Senaste</button>
+          <button className="btn btn-desc" onClick={() => updateSort('desc')}>Äldst</button>
         </div>
 
       </div>

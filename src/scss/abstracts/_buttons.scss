@@ -10,6 +10,12 @@
   }
 }
 
+@mixin btn-round {
+  @include btn-default;
+  width: calc(100% / 2);
+  border-radius: 50%;
+}
+
 @mixin btn-article {
   border: none;
   padding: 0.625rem 1.25rem;
@@ -20,10 +26,4 @@
   &:first-child {
     margin-right: 0.5rem;
   }
-}
-
-@mixin btn-round {
-  @include btn-default;
-  width: calc(100% / 2);
-  border-radius: 50%;
 }

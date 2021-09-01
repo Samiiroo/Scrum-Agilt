@@ -1,4 +1,13 @@
 {
+  "rest": [
+    {
+      "title": "News & Articles",
+      "news": "news",
+      "article": "article",
+      "latest": "latest",
+      "oldest": "oldest"
+    }
+  ],
   "articles": [
     {
       "title": "Earths IT jobbs are disappearing cause of AI",

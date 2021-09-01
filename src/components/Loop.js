@@ -6,13 +6,18 @@ function Loop(props) {
   const displayLoop = () => {
     console.log("props: ", props)
     let filter = [];
+
+    if (props.sort === 'asc') {
+      ListOfArticles.sort((a, b) => a.date - b.date)
+      console.log("ASC: ", ListOfArticles)
+    }
+    else if (props.sort === 'desc') {
+      ListOfArticles.sort((a, b) => b.date - a.date)
+      console.log("DESC: ", ListOfArticles)
+    }
+
+
     if (props.filter === 'news') {
-      if (props.sort === 'asc') {
-        console.log("asc")
-      }
-      else if (props.sort === 'desc') {
-        console.log('desc')
-      }
       filter = ListOfArticles.filter((article, key) => {
         return article.tags[0] === "nyheter";
       });
@@ -37,6 +42,7 @@ function Loop(props) {
       filter = props.articles;
       console.log(filter)
     }
+
 
     return filter.map((content, key) => <div key={key} className="content">
       <h2>{content.title}</h2>
