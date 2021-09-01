@@ -3,6 +3,7 @@ import Axios from 'axios';
 import Loader from './Loader';
 import '../scss/components/_about.scss';
 function About(props) {
+
   const [personal, updatePersonal] = useState(null);
   const [isMounted, updateIsMounted] = useState(true);
 
@@ -40,16 +41,17 @@ function About(props) {
   }, [])
 
   return (
-    <section class="about" id="about">
+    <section class="about" id="about" style={{ background: "url('/assets/img/about-bg.png') no-repeat center/cover" }}>
       <div className="container">
-        <h2 class="catch-frase-title center">*Catch frase*</h2>
+        <h2 className="title center">Om oss</h2>
+        <h3 class="catchphrase center">Katter har inget mot oss i smidighet</h3>
+        <p className="selling-words center">
+          Vi bygger en snygg, Modern och mobilvänlig hemsida som kan lyfta företaget mot nya möjligheter.
+        </p>
         {isMounted && <Loader />}
         <div class="staff-container">
           {personal !== null && mapOutStaff()}
         </div>
-        <p className="selling-words center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio lorem, suscipit sed pharetra id, ultrices posuere magna. Nulla justo magna, consequat in fermentum eu, consectetur vitae lacus. Fusce cursus lobortis sollicitudin. Nulla varius erat quis risus volutpat tincidunt. Sed aliquam scelerisque diam, et aliquet elit consequat non. In imperdiet feugiat orci pulvinar blandit. Curabitur sit amet ex accumsan mi eleifend rhoncus. Vivamus feugiat ligula odio. Aliquam placerat, urna nec tincidunt porta, dui urna tempor diam, non feugiat massa felis nec velit. Maecenas finibus ultrices metus, eget suscipit mauris auctor sed.
-        </p>
       </div>
     </section>
   );

@@ -10,7 +10,6 @@ function App(props) {
   return (
     <>
       <main>
-
         <About />
       </main>
     </>

@@ -1,10 +1,27 @@
 @use "../abstracts/" as *;
 
 .about {
-  .staff-container {
-    @include grid33(true);
+  padding: 4rem;
+  .title {
+    margin-bottom: 2rem;
+  }
+  .catchphrase {
+    margin: 2rem 0;
+  }
 
+  .selling-words {
+    margin-bottom: 2rem;
+  }
+
+  .staff-container {
+    padding: 0 4rem;
+    @include grid33(true);
     .content {
+      & > * {
+        padding: 0.5rem;
+      }
+      background-color: $primary-color;
+      color: $font-on-hover;
       @include flex-columns-center;
       align-items: center;
     }
