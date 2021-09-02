@@ -9,7 +9,7 @@ function App(props) {
 
   return (
     <>
-      <Header/>
+      <Header />
       <main>
       </main>
     </>
