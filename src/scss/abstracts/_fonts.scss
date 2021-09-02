@@ -15,11 +15,11 @@ $header-4: 1.44rem;
 $p: 1.2rem;
 
 // Colour code:
-$bg: hsl(196, 100%, 97%);
+$primary-color: hsl(320, 7%, 92%);
 $bg-header: hsl(190, 100%, 29%);
 $bg-header-alternative: hsl(197, 100%, 36%);
-$font-colour: rgb(236, 233, 235);
-$font-on-hover: #262626;
+$font-on-hover: hsl(0, 0%, 15%);
+$CTA: hsl(34, 100%, 50%);
 
 body {
   font-family: $roboto;
