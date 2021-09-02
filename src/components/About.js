@@ -20,6 +20,7 @@ function About(props) {
           <img src={`/assets/img/${staff.img}`} alt="avartar of staff" />
           <h3>{staff.name}</h3>
           <h4>{staff.occupation}</h4>
+          <a href={`mailto: ${staff.email}`}>{staff.email}</a>
         </div>
       </div>
     )

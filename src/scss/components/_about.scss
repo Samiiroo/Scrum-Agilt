@@ -18,6 +18,8 @@
     @include grid33(true);
     .content {
       & > * {
+        color: $font-on-hover;
+        text-decoration: none;
         padding: 0.5rem;
       }
       box-shadow: 0px 0px 3px 3px grey;
