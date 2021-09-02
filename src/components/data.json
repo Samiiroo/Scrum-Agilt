@@ -1,32 +1,32 @@
 [
-    {
-      "question": "How are you",
-      "answer": "I am good",
-      "open": false
-    },
-    {
-      "question": "Whast is your name",
-      "answer": "my name is jeff",
-      "open": false
-    },
-    {
-      "question": "How old are you",
-      "answer": "I am 25y/o",
-      "open": false
-    },
-    {
-      "question": "where are you from",
-      "answer": "I am from korea",
-      "open": false
-    },
-    {
-      "question": "what is up",
-      "answer": "noiceee",
-      "open": false
-    },
-    {
-      "question": "hmmmm",
-      "answer": "hmmmmmmmmmmmmm",
-      "open": false
-    }
+  {
+    "question": "Vilka programmeringsspråk använder oss av?",
+    "answer": "Vissa av oss jobbar med fokus på frontendutveckling (HTML/CSS, JavaScript, React, Scss), andra med backendutveckling (Node.js) och vissa av oss gör lite både och.",
+    "open": false
+  },
+  {
+    "question": "Vad är den beräknade tiden behöver man att vänta för att få sin webbplats färdigt?",
+    "answer": "Vårt team består av flera experter inom programmering och webbdesign. När vi tar emot beställningen från klienten, arbetar vi hårt för att leverera webbplatsen på bästa och professionella sätt som möjligt, och därför beror den beräknade tiden för att leverera webbplatsen till klienten på antal funktionalitet som kommer att läggas till in i webbplatsen",
+    "open": false
+  },
+  {
+    "question": "Hur man betalar för Tamam?",
+    "answer": "Vi accepterar följande kort: Visa, MasterCard och vi accepterar också PayPal.",
+    "open": false
+  },
+  {
+    "question": "Hur kan man nå oss?",
+    "answer": "Vår kundtjänstpersonal finns tillgänglig måndag till fredag från 8 till 18 på telefon, använda vårt kontaktformulär. Du kan nå oss utanför öppettiderna med vårt kontaktformulär.",
+    "open": false
+  },
+  {
+    "question": "Jobba hos oss?",
+    "answer": "Just nu söker vi Backend-utvecklare till vårt team. Vi söker dig som: Har koll på integrationer mellan olika system - Arbetar effektivt med shellscript och annat i terminalen - God förståelse och intresse av frontend-backend-API-kommunikation och autentisering. Är du intresserad? Varmt välkommen att maila din ansökan till tamam@agile.se",
+    "open": false
+  },
+  {
+    "question": "(COVID-19) uppdateringar?",
+    "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quae error consectetur rerum et veniam animi provident velit ea nihil voluptatem accusamus placeat, atque explicabo, esse corporis. Minima, incidunt iusto? Vitae, voluptate excepturi atque minima sunt error explicabo corrupti nostrum fugit cum alias dicta deserunt consequuntur quaerat deleniti corporis laudantium laborum iste ut tempore in dolorum maiores. Distinctio, quaerat corrupti!",
+    "open": false
+  }
 ]
