@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/components/_header.scss"
 function Header(props) {
+
   return (
     <header>
       <a href="/">
@@ -21,10 +22,10 @@ function Header(props) {
       </nav>
       <div className="flags">
         <button>
-          <img className="swedish-symbol" src="/assets/se.png" alt="svenska" />
+          <img className="swedish-symbol" src="/assets/se.png" alt="svenska" onClick={() => localStorage.setItem('language', 'sv')} />
         </button>
         <button>
-          <img className="english-symbol" src="/assets/uk.png" alt="english" />
+          <img className="english-symbol" src="/assets/uk.png" alt="english" onClick={() => localStorage.setItem('language', 'en')} />
         </button>
       </div>
 

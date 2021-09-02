@@ -5,6 +5,7 @@ function App(props) {
 
   useEffect(() => {
     document.title = 'Agile Tamam'
+    localStorage.setItem('language', 'sv');
   }, [])
 
   return (
