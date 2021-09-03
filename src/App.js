@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useState } from "react";
 import './scss/_reset.scss';
 import FAQ from './components/Faq';
 
