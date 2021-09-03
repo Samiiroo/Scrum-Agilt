@@ -3,6 +3,11 @@
 .articles {
   min-height: 100%;
   padding: 2rem 0;
+
+  h2 {
+    margin: 2rem 0;
+  }
+
   .btn {
     @include btn-article;
   }
@@ -33,15 +38,7 @@
       .tag {
         margin: 1rem 0;
         span {
-          border: none;
-          padding: 0.625rem 1.25rem;
-          border-radius: 1rem;
-          background-color: hsl(192, 60%, 55%);
-          color: hsl(320, 8%, 92%);
-          cursor: pointer;
-          &:first-child {
-            margin-right: 0.5rem;
-          }
+          @include btn-article;
           cursor: default;
           text-decoration: none;
           padding: 0.1rem 1.25rem;
