@@ -22,7 +22,7 @@ $CTA: hsl(34, 100%, 50%);
 
 body {
   main {
-    height: 100vh;
+    min-height: 100vh;
   }
   font-family: $roboto;
   color: $primary-color;

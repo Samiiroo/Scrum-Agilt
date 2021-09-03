@@ -1,34 +1,33 @@
 @use "../abstracts/" as *;
 
-
 footer {
-    height: 21rem;
-    background-color: $bg-header-footer;
-    
+  height: 21rem;
+  background-color: $bg-header-footer;
 
-    .footer-list{
-        height: 90%;
-        align-items: center;
-        @include flex-rows-center;
-        li:first-child,
-        li:last-child {
-            padding: 0 0;
-        }
-        li {
-            a {
-                font-size: $header-3;
-                font-weight: 900;
-                font-family: $roboto;
-                color: $font;
-                text-decoration: none;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-            padding: 0 3rem;
-        }
+  .footer-list {
+    height: 90%;
+    align-items: center;
+    @include flex-rows-center;
+    li:first-child,
+    li:last-child {
+      padding: 0 0;
     }
-    .copyright{
-        @include flex-rows-center
+    li {
+      a {
+        font-size: $header-3;
+        font-weight: 900;
+        font-family: $roboto;
+        color: $font;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      padding: 0 3rem;
     }
+  }
+  .copyright {
+    @include flex-rows-center;
+    color: $font;
+  }
 }

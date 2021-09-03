@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 .articles {
-  min-height: 100%;
+  min-height: 100vh;
   padding: 2rem 0;
 
   h2 {
