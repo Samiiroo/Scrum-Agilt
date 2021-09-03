@@ -9,18 +9,17 @@ function Loop(props) {
 
     if (props.sort === 'desc') {
       ListOfArticles.sort(function (a, b) {
-        var dateA = new Date(a.date), dateB = new Date(b.date);
+        let dateA = new Date(a.date), dateB = new Date(b.date);
         return dateA - dateB;
       });
     }
 
     else {
       ListOfArticles.sort(function (a, b) {
-        var dateA = new Date(a.date), dateB = new Date(b.date);
+        let dateA = new Date(a.date), dateB = new Date(b.date);
         return dateB - dateA;
       });
     }
-
 
 
     if (props.filter === 'news') {
