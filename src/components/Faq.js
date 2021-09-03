@@ -7,33 +7,20 @@ import Loader from './Loader';
 function Faq() {
 	const [isMounted, updateIsMounted] = useState(true);
 	const [faqs, updateFAQ] = useState(null);
-	const [open, updateOpen] = useState(false);
+
+
 	const FetchFAQ = async () => {
 		return await Axios.get('json/faq.json');
 	}
 
-	const toggleFaq = (i) => {
-		console.log(i)
-		if (i) {
-			updateOpen(true);
-		}
-		else {
-			updateOpen(false)
-		}
-	}
 
 	const RenderFAQ = () => {
-		return faqs.map((faq, i) => (
-			<div className={`faq ${open ? 'open' : ''}`} key={i}>
-				<div data-open={open} className="faq-question" onClick={() => toggleFaq(i)}>
-					{faq.question}
-				</div>
-				<div className={`faq-answer`}>
-					{faq.answer}
-				</div>
-			</div>
-
-		))
+		return faqs.map((faq, i) =>
+			<details>
+				<summary>{faq.question}</summary>
+				<p>{faq.answer}</p>
+			</details>
+		)
 	}
 
 	useEffect(() => {
@@ -42,15 +29,17 @@ function Faq() {
 		}
 		FetchFAQ().then(res => {
 			updateFAQ(res.data.faqs)
-			updateIsMounted(true)
+			updateIsMounted(false)
 		}).catch(err => console.error(err))
 	}, [])
 
 	return (
 		<section className='faqs' style={{ background: `url('assets/img/faq-bg.png') no-repeat center/cover` }}>
 			<h2 className='title center'>Vanliga frågor</h2>
-			{!isMounted && <Loader />}
-			{faqs !== null && RenderFAQ()}
+			{isMounted && <Loader />}
+			<div className="faq-container">
+				{faqs !== null && RenderFAQ()}
+			</div>
 		</section>
 
 	)
