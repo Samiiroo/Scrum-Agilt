@@ -9,15 +9,13 @@ import FAQ from './components/Faq';
 
 function App(props) {
 
-  const [lang, updateLang] = useState('sv');
-
   useEffect(() => {
     document.title = 'Agile Tamam';
 
   }, [])
 
   return (
-    <DataContext.Provider value={lang}>
+    <>
       <Header />
       <main>
         <LandingPage />
@@ -26,7 +24,7 @@ function App(props) {
         <Articles />
       </main>
       <Footer />
-    </DataContext.Provider>
+    </>
   );
 }
 
