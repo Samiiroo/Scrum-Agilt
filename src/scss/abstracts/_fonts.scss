@@ -8,18 +8,16 @@ $roboto: "Roboto", sans-serif;
 $passion: "Passion One", cursive;
 
 // Font-sizes:
-$header-1: 4.125rem;
+$header-1: 3rem;
 $header-2: 2.5rem;
 $header-3: 2rem;
 $header-4: 1.44rem;
 $p: 1.2rem;
 
 // Colour code:
-$bg: hsl(196, 100%, 97%);
-$bg-header: hsl(190, 100%, 29%);
-$bg-header-alternative: hsl(197, 100%, 36%);
-$font-colour: hsl(320, 7%, 92%);
-$font-on-hover: hsl(0, 0%, 15%);
+$bg: hsl(320, 7%, 92%);
+$bg-header-footer: #46B5D1;
+$font: hsl(0, 0%, 15%);
 $CTA: hsl(34, 100%, 50%);
 
 body {
