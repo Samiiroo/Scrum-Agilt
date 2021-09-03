@@ -9,4 +9,8 @@ function Loader() {
   )
 }
 
+<<<<<<< HEAD
 export default Loader
+=======
+export default Loader
+>>>>>>> tommy-filter-article

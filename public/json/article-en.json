@@ -1,0 +1,56 @@
+{
+  "rest": [
+    {
+      "title": "News & Articles",
+      "news": "news",
+      "article": "article",
+      "latest": "latest",
+      "oldest": "oldest"
+    }
+  ],
+  "articles": [
+    {
+      "title": "Earths IT jobbs are disappearing cause of AI",
+      "readmore": "read more...",
+      "tags": [
+        "news",
+        "article"
+      ],
+      "date": "2021-08-31",
+      "author": "Samantha Smith"
+    },
+    {
+      "title": "Earths IT jobbs are disappearing cause of AI - part 2",
+      "tags": [
+        "news",
+        "article"
+      ],
+      "date": "2021-09-01",
+      "author": "Samantha Smith"
+    },
+    {
+      "title": "Why people jumping off the Rails train?",
+      "tags": [
+        "article"
+      ],
+      "date": "2021-08-15",
+      "author": "The doctor"
+    },
+    {
+      "title": "PHP 8.0 out now!",
+      "tags": [
+        "article"
+      ],
+      "date": "2021-08-14",
+      "author": "The doctor"
+    },
+    {
+      "title": "Doctor Who S13 out now",
+      "tags": [
+        "article"
+      ],
+      "date": "2021-05-21",
+      "author": "Rose Tyler"
+    }
+  ]
+}
