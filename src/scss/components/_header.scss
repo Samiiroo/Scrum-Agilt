@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-header{
+header {
     height: 5rem;
 
     .logo {
@@ -9,7 +9,7 @@ header{
     @include grid33(true);
     justify-items: center;
     align-items: center;
-    background-color: $bg-header;
+    background-color: $bg-header-footer;
 
     .nav-list {
         @include flex-rows-center;
@@ -19,12 +19,12 @@ header{
         }
         li {
             a {
-              font-weight: 900;
-              color: $font-on-hover;
-              text-decoration: none;
-              &:hover {
-                text-decoration: underline;
-              }
+                font-weight: 900;
+                color: $font-on-hover;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
             padding: 0 1rem;
         }
@@ -33,9 +33,9 @@ header{
     .flags {
         @include flex-rows-center;
         button {
-          cursor: pointer;
-          background: none;
-          border: none;
+            cursor: pointer;
+            background: none;
+            border: none;
         }
         img {
             height: 3rem;
@@ -43,6 +43,5 @@ header{
                 padding: 0 1rem;
             }
         }
-
     }
 }
