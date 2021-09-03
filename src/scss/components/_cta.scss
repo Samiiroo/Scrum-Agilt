@@ -1,0 +1,8 @@
+@use "../abstracts/" as *;
+
+.cta{
+
+.btn{
+    @include btn-cta;
+}
+}
