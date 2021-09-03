@@ -1,0 +1,16 @@
+@use "../abstracts/" as *;
+
+.landing-page {
+  min-height: 100%;
+  @include flex-columns-center;
+  align-items: center;
+  .paragraphs {
+    p:first-child {
+      margin-bottom: 2rem;
+      width: 90%;
+    }
+    p:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+}

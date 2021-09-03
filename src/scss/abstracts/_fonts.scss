@@ -16,13 +16,16 @@ $p: 1.2rem;
 
 // Colour code:
 $primary-color: hsl(320, 7%, 92%);
-$bg-header-footer: hsl(190, 100%, 29%);
+$bg-header-footer: hsl(192, 60%, 55%);
 $font: hsl(0, 0%, 15%);
 $CTA: hsl(34, 100%, 50%);
 
 body {
+  main {
+    height: 100vh;
+  }
   font-family: $roboto;
-
+  color: $primary-color;
   .center {
     text-align: center;
   }
@@ -50,4 +53,8 @@ h3 {
 
 h4 {
   font-size: $header-4;
+}
+
+p {
+  font-size: $p;
 }

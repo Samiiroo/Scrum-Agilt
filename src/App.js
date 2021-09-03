@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './scss/_reset.scss';
 import Header from './components/Header'
+import LandingPage from './components/LandingPage';
 function App(props) {
 
   useEffect(() => {
@@ -12,6 +13,7 @@ function App(props) {
     <>
       <Header />
       <main>
+        <LandingPage />
       </main>
     </>
   );
