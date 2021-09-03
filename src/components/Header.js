@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import "../scss/components/_header.scss"
+import React from 'react';
+import '../scss/components/_header.scss';
 function Header(props) {
-
   return (
     <header>
       <a href="/">
@@ -28,7 +27,6 @@ function Header(props) {
           <img className="english-symbol" src="/assets/uk.png" alt="english" onClick={() => localStorage.setItem('language', 'en')} />
         </button>
       </div>
-
     </header>
   );
 }
