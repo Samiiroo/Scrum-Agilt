@@ -2,7 +2,8 @@
 
 header {
     height: 5rem;
-
+    position: fixed;
+    width: 100%;
     .logo {
         height: 3.9rem;
     }
@@ -20,7 +21,7 @@ header {
         li {
             a {
                 font-weight: 900;
-                color: $font-on-hover;
+                color: $font;
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
