@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './scss/_reset.scss';
-import CTA from './components/CTA';
-import './scss/components/_startpage.scss';
+import './scss/components/_landing-page.scss';
+import LandingPage from './components/LandingPage';
 function App(props) {
 
   useEffect(() => {
@@ -11,7 +11,7 @@ function App(props) {
   return (
     <>
       <main>
-        <CTA />
+        <LandingPage />
       </main>
     </>
   );

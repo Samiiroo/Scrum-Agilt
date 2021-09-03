@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.landing-page {
+  padding: 4rem;
+  @include flex-columns-center;
+  align-items: center;
+}

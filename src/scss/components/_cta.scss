@@ -1,8 +1,18 @@
 @use "../abstracts/" as *;
 
-.cta{
-
-.btn{
-    @include btn-cta;
-}
+.cta {
+    @include flex-columns-center;
+    align-items: center;
+    .btn {
+        margin-top: 4rem;
+        border: none;
+        background-color: $CTA;
+        width: 18.75rem;
+        padding: 1rem;
+        font-size: $header-3;
+        color: $font;
+        text-decoration: none;
+        transition: all;
+        border: 1px solid hsl(0, 0%, 50%);
+    }
 }

@@ -15,19 +15,3 @@
   width: calc(100% / 2);
   border-radius: 50%;
 }
-
-@mixin btn-cta {
-border: none;
-background-color: #ff9100;
-  transition: border 300ms ease 0s;
-  margin-top: 5rem;
-  padding: 1rem;
-  font-size: 30px;
-  font-weight: bold;
-  &:hover,
-  &:focus {
-    background-color: #c4baac;
-    border: hsl(0, 0%, 100%) solid 0.125rem;
-    color:#262626;
-  }
-}
