@@ -16,7 +16,7 @@ function About(props) {
   const mapOutStaff = () => {
     return personal.map((staff, key) =>
       <div className="personal-card" key={key}>
-        <div class={`content`}>
+        <div className={`content`}>
           <img src={`/assets/img/${staff.img}`} alt="avartar of staff" />
           <h3>{staff.name}</h3>
           <h4>{staff.occupation}</h4>
@@ -33,7 +33,6 @@ function About(props) {
     }
     // Här hämtar vi data och sparar ner det/uppdaterar till vår useState 
     FetchPersonalData().then(res => {
-      console.log(res)
       updatePersonal(res.data.staff);
 
       // Stäng av vår loader.
@@ -42,15 +41,15 @@ function About(props) {
   }, [])
 
   return (
-    <section class="about" id="about" style={{ background: "url('/assets/img/about-bg.png') no-repeat center/cover" }}>
+    <section className="about" id="about" style={{ background: "url('/assets/img/about-bg.png') no-repeat center/cover" }}>
       <div className="container">
         <h2 className="title center">Om oss</h2>
-        <h3 class="catchphrase center">Katter har inget mot oss i smidighet</h3>
+        <h3 className="catchphrase center">Katter har inget mot oss i smidighet</h3>
         <p className="selling-words center">
           Vi bygger en snygg, Modern och mobilvänlig hemsida som kan lyfta företaget mot nya möjligheter.
         </p>
         {isMounted && <Loader />}
-        <div class="staff-container">
+        <div className="staff-container">
           {personal !== null && mapOutStaff()}
         </div>
       </div>

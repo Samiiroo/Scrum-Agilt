@@ -7,14 +7,13 @@ function Articles(props) {
 
   const [articles, updateArticles] = useState(null);
   const [rest, updateRest] = useState(null);
-
   const [isMounted, updateIsMounted] = useState(true);
   const [filter, updateFilter] = useState('');
   const [sort, updateSort] = useState('');
 
 
   const FetchArticlesData = async () => {
-    if (props.lang === 'en') {
+    if (localStorage.getItem('language') === 'en') {
       return await Axios.get('json/article-en.json');
     }
     else {
@@ -37,14 +36,14 @@ function Articles(props) {
   }, [])
 
   return (
-    <section className="articles" style={{ background: "url('/assets/img/article-bg.png') center/cover no-repeat" }}>
+    <section id="article" className="articles" style={{ background: "url('/assets/img/article-bg.png') center/cover no-repeat" }}>
       <h2 className="center">{rest !== null && rest[0].title}</h2>
       <div className="filter-sort-container">
         <div className="filter center">
           <button className="btn btn-news" onClick={() => updateFilter('news')}>Nyheter</button>
           <button className="btn btn-articles" onClick={() => updateFilter('articles')}>Artiklar</button>
         </div>
-        <div class="sort center">
+        <div className="sort center">
           <button className="btn btn-asc" onClick={() => updateSort('asc')}>Senaste</button>
           <button className="btn btn-desc" onClick={() => updateSort('desc')}>Äldst</button>
         </div>

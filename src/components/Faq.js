@@ -8,15 +8,14 @@ function Faq() {
 	const [isMounted, updateIsMounted] = useState(true);
 	const [faqs, updateFAQ] = useState(null);
 
-
 	const FetchFAQ = async () => {
 		return await Axios.get('json/faq.json');
 	}
 
 
 	const RenderFAQ = () => {
-		return faqs.map((faq, i) =>
-			<details>
+		return faqs.map((faq, key) =>
+			<details key={key}>
 				<summary>{faq.question}</summary>
 				<p>{faq.answer}</p>
 			</details>
@@ -34,7 +33,7 @@ function Faq() {
 	}, [])
 
 	return (
-		<section className='faqs' style={{ background: `url('assets/img/faq-bg.png') no-repeat center/cover` }}>
+		<section id="faq" className='faqs' style={{ background: `url('assets/img/faq-bg.png') no-repeat center/cover` }}>
 			<h2 className='title center'>Vanliga frågor</h2>
 			{isMounted && <Loader />}
 			<div className="faq-container">
