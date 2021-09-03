@@ -1,70 +1,66 @@
 @use "../abstracts/" as *;
 
-.showcase{
-    height: 55vh;
-    background: url('../assets/background.svg') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.showcase {
+  height: 55vh;
+  background: url("../assets/background.svg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    .title{
-        text-align: center;
-        margin-bottom: 5rem;
-        color: $primary-color;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  .title {
+    text-align: center;
+    margin-bottom: 5rem;
+    color: $primary-color;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .faq {
+    max-width: 768px;
+    margin: 5px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(231, 231, 231);
+
+    .faq-question {
+      position: relative;
+      font-size: 20px;
+      transition: all 0.4s ease;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 20px;
+        transition: all 0.4s ease-out;
+      }
     }
 
-    .faq{
-
-        max-width: 768px;
-        margin: 5px auto;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        background-color: rgb(231, 231, 231);
-
-        .faq-question{
-            position: relative;
-            font-size: 20px;
-            transition: all 0.4s ease;
- 
-    
-            &::after{
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: 0px;
-                transform: translateY(-50%);
-                width: 30px;
-                height: 20px;
-                background:  url('../assets/arrow.svg') center/contain no-repeat;
-                transition: all 0.4s ease-out;
-            }
-        }
-    
-        .faq-answer {
-            opacity: 0;
-            max-height: 0;
-            overflow-y: hidden;
-            transition: all 0.4s ease-out;
-        }
+    .faq-answer {
+      opacity: 0;
+      max-height: 0;
+      overflow-y: hidden;
+      transition: all 0.4s ease-out;
     }
-    
-    .faq.open{
-    
-        .faq-question {
-            margin-bottom: 7px;
-    
-            &::after{
-                transform: translateY(-50%) rotate(180deg);
-            }
-        }
-    
-        .faq-answer {
-            max-height: 1000px;
-            opacity: 1;
-        }
-    
-    }
+  }
 
+  .faq {
+    &.open {
+      .faq-question {
+        margin-bottom: 7px;
+
+        &::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .faq-answer {
+        max-height: 1000px;
+        opacity: 1;
+      }
+    }
+  }
 }

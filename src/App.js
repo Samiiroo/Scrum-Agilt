@@ -1,25 +1,9 @@
 import React, { useEffect } from 'react';
 import { useState } from "react";
 import './scss/_reset.scss';
-import Faq from './components/Faq';
-import Wrap from './components/Wrap';
-import data from './components/data.json'
+import FAQ from './components/Faq';
 
 function App(props) {
-
-  const [ faqs, setFaqs ] = useState(data)
-
-  const toggleFaq = (index) => {
-    setFaqs(faqs.map( (faq, i) => {
-      if ( i === index ){
-        faq.open = !faq.open
-      }else{
-        faq.open = false
-      }
-
-      return faq;
-    }))
-  }
 
   useEffect(() => {
     document.title = 'Agile Tamam'
@@ -28,13 +12,7 @@ function App(props) {
   return (
     <>
       <main>
-        <Wrap>
-          <div>
-            {faqs.map((faq, i) => (
-              <Faq faq={faq} index={i} toggleFaq={toggleFaq} />
-            ))}
-          </div>
-        </Wrap>
+        <FAQ />
       </main>
     </>
   );
