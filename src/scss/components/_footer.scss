@@ -1,9 +1,9 @@
 @use "../abstracts/" as *;
 
 footer {
+  @include flex-columns-center;
   height: 21rem;
   background-color: $bg-header-footer;
-
   .footer-list {
     height: 90%;
     align-items: center;
@@ -28,6 +28,7 @@ footer {
   }
   .copyright {
     @include flex-rows-center;
+    margin-top: 3rem;
     color: $font;
   }
 }

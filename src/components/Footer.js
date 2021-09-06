@@ -1,23 +1,31 @@
 import React from 'react';
 import '../scss/components/_footer.scss';
 
+import { Anchor } from 'antd';
+
+const { Link } = Anchor;
+
 function Footer() {
   return (
     <footer>
-      <ul className="footer-list">
-        <li>
-          <a href="#about">Om oss</a>
-        </li>
-        <li>
-          <a href="#faq">Vanliga frågor</a>
-        </li>
-        <li>
-          <a href="#contact">Kontakt</a>
-        </li>
-      </ul>
+      <Anchor targetOffset='80'>
+        <ul className="footer-list">
+          <li>
+            <Link href="#about" title="Om oss" />
+          </li>
+          <li>
+            <Link href="#faq" title="Vanliga frågor" />
+          </li>
+          <li>
+            <Link href="#contact" title="Kontakt" />
+          </li>
+        </ul>
+      </Anchor>
       <div className="copyright">Copyright: Inc.2021 all reserved</div>
     </footer>
   )
 }
+
+
 
 export default Footer;

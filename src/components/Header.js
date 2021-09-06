@@ -1,23 +1,31 @@
 import React from 'react';
 import '../scss/components/_header.scss';
+
+import { Anchor } from 'antd';
+
+const { Link } = Anchor;
+
 function Header(props) {
+
   return (
     <header>
       <a href="/">
         <img src="/assets/logo.png " alt="logo" className="logo" />
       </a>
       <nav className="nav-bar">
-        <ul className="nav-list">
-          <li className="nav-list-item">
-            <a href="#about">Om oss</a>
-          </li>
-          <li className="nav-list-item">
-            <a href="#faq">Vanliga frågor</a>
-          </li>
-          <li className="nav-list-item">
-            <a href="#contact">Kontakt</a>
-          </li>
-        </ul>
+        <Anchor targetOffset='80'>
+          <ul className="nav-list">
+            <li className="nav-list-item">
+              <Link href="#about" title="Om oss" />
+            </li>
+            <li className="nav-list-item">
+              <Link href="#faq" title="Vanliga frågor" />
+            </li>
+            <li className="nav-list-item">
+              <Link href="#contact" title="Kontakt" />
+            </li>
+          </ul>
+        </Anchor>
       </nav>
       <div className="flags">
         <button>
