@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
+import Contact from './components/Contact';
 import './scss/_reset.scss';
+
+
+
 function App(props) {
 
   useEffect(() => {
@@ -9,6 +13,8 @@ function App(props) {
   return (
     <>
       <main>
+        <Contact/>
+
       </main>
     </>
   );
