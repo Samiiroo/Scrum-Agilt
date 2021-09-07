@@ -1,14 +1,14 @@
-import React from 'react';
-import '../scss/components/_footer.scss';
+import React from "react";
+import "../scss/components/_footer.scss";
 
-import { Anchor } from 'antd';
+import { Anchor } from "antd";
 
 const { Link } = Anchor;
 
 function Footer() {
   return (
     <footer>
-      <Anchor targetOffset='80'>
+      <Anchor targetOffset="80">
         <ul className="footer-list">
           <li>
             <Link href="#about" title="Om oss" />
@@ -23,9 +23,7 @@ function Footer() {
       </Anchor>
       <div className="copyright">Copyright: Inc.2021 all reserved</div>
     </footer>
-  )
+  );
 }
-
-
 
 export default Footer;

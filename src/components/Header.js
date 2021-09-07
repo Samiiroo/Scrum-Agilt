@@ -1,19 +1,20 @@
-import React from 'react';
-import '../scss/components/_header.scss';
+import React from "react";
+import "../scss/components/_header.scss";
 
-import { Anchor } from 'antd';
+import { Anchor } from "antd";
 
 const { Link } = Anchor;
 
 function Header(props) {
-
   return (
     <header>
-      <a href="/">
-        <img src="/assets/logo.png " alt="logo" className="logo" />
-      </a>
+      <div>
+        <a href="/">
+          <img src="/assets/logo.png " alt="logo" className="logo" />
+        </a>
+      </div>
       <nav className="nav-bar">
-        <Anchor targetOffset='80'>
+        <Anchor targetOffset="80">
           <ul className="nav-list">
             <li className="nav-list-item">
               <Link href="#about" title="Om oss" />
@@ -29,10 +30,20 @@ function Header(props) {
       </nav>
       <div className="flags">
         <button>
-          <img className="swedish-symbol" src="/assets/se.png" alt="svenska" onClick={() => localStorage.setItem('language', 'sv')} />
+          <img
+            className="swedish-symbol"
+            src="/assets/se.png"
+            alt="svenska"
+            onClick={() => localStorage.setItem("language", "sv")}
+          />
         </button>
         <button>
-          <img className="english-symbol" src="/assets/uk.png" alt="english" onClick={() => localStorage.setItem('language', 'en')} />
+          <img
+            className="english-symbol"
+            src="/assets/uk.png"
+            alt="english"
+            onClick={() => localStorage.setItem("language", "en")}
+          />
         </button>
       </div>
     </header>
