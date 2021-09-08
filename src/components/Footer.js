@@ -1,15 +1,23 @@
 import React from 'react';
 import '../scss/components/_footer.scss';
 
+import { Anchor } from 'antd';
+
+const { Link } = Anchor;
+
 function Footer() {
   
   return (
     <footer>
+     <Anchor>
+        <Link href="#landingpage" >
       <div className="arrow-up">
-        <i className="fas fa-angle-double-up fa-2x"></i>
-            <a href="#landingpage"> </a>
       
+        <i className="fas fa-angle-double-up fa-2x"></i>
+    
       </div>
+        </Link>
+      </Anchor>
       <ul className="footer-list">
        
         <li>
