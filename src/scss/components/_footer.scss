@@ -1,16 +1,17 @@
 @use "../abstracts/" as *;
 
 footer {
-  height: 21rem;
+  height: 11rem;
   background-color: $bg-header-footer;
 
   .footer-list {
-    height: 90%;
+    height: 60%;
     align-items: center;
     @include flex-rows-center;
     li:first-child,
     li:last-child {
       padding: 0 0;
+        cursor: pointer;
     }
     li {
       a {
@@ -20,7 +21,7 @@ footer {
         color: $font;
         text-decoration: none;
         &:hover {
-          text-decoration: underline;
+          color:rgb(107, 92, 92);
         }
       }
       padding: 0 3rem;
@@ -30,4 +31,37 @@ footer {
     @include flex-rows-center;
     color: $font;
   }
+}
+.arrow-up{
+  width: 5rem;
+  height: 2rem;
+ position:relative;
+  margin: auto;
+  cursor: pointer;
+  padding-top: 1rem;
+  -webkit-animation: action 1s infinite  alternate;
+        animation: action 1s infinite  alternate;
+       @-webkit-keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes action {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+}
+ }
+ 
+.fas{
+  color: rgb(32, 30, 30);
+  // margin-top: 1rem;
+  animation: MoveUpDown is linear infinite;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.fas:hover{
+  color:rgb(107, 92, 92);
+  
+
 }

@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from 'easy-peasy';
+// import { createStore } from 'easy-peasy';
 
-const store = createStore({
-  todos: {
-    items: [],
-  }
-});
+// const store = createStore({
+//   todos: {
+//     items: [],
+//   }
+// });
 
 ReactDOM.render(
   <React.StrictMode>
