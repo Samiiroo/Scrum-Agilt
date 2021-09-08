@@ -2,7 +2,7 @@
 
 footer {
   @include flex-columns-center;
-  height: 21rem;
+  height: 18rem;
   background-color: $bg-header-footer;
   .footer-list {
     height: 90%;
@@ -30,5 +30,36 @@ footer {
     @include flex-rows-center;
     margin-top: 3rem;
     color: $font;
+  }
+
+  .arrow-up {
+    margin: 0 auto 2rem auto;
+    cursor: pointer;
+    animation: action 1s infinite alternate;
+    @-webkit-keyframes action {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+    @keyframes action {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  }
+
+  .fas {
+    color: $font;
+    animation: MoveUpDown is linear infinite;
+
+    &:hover {
+      color: rgb(107, 92, 92);
+    }
   }
 }
