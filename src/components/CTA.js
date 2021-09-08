@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/components/_cta.scss';
 import { Anchor } from 'antd';
-// const { Link } = Anchor;
+const { Link } = Anchor;
 
 function CTA(props) {
   return (
