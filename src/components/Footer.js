@@ -1,14 +1,11 @@
 import React,{useState}from 'react';
 import '../scss/components/_footer.scss';
-
 import { Anchor } from 'antd';
 
 const { Link } = Anchor;
 
 function Footer() {
   const [showScroll, setShowScroll] = useState(false);
-
-
 
   const checkScrollTop = () => {
 
@@ -22,7 +19,6 @@ function Footer() {
   };
 
   const scrollTop = () => {
-
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   window.addEventListener("scroll", checkScrollTop);
@@ -36,14 +32,13 @@ function Footer() {
           <li>
             <Link href="#about" title="Om oss" />
           </li>
+          
           <li>
             <Link href="#faq" title="Vanliga frågor" />
           </li>
 
           <li>
-
             <Link href="#contact" title="Kontakt" />
-
           </li>
 
         </ul>
