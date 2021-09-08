@@ -1,17 +1,16 @@
 @use "../abstracts/" as *;
 
 footer {
-  height: 11rem;
+  @include flex-columns-center;
+  height: 18rem;
   background-color: $bg-header-footer;
-
   .footer-list {
-    height: 60%;
+    height: 90%;
     align-items: center;
     @include flex-rows-center;
     li:first-child,
     li:last-child {
       padding: 0 0;
-        cursor: pointer;
     }
     li {
       a {
@@ -21,7 +20,7 @@ footer {
         color: $font;
         text-decoration: none;
         &:hover {
-          color:rgb(107, 92, 92);
+          text-decoration: underline;
         }
       }
       padding: 0 3rem;
@@ -29,39 +28,38 @@ footer {
   }
   .copyright {
     @include flex-rows-center;
+    margin-top: 3rem;
     color: $font;
   }
-}
-.arrow-up{
-  width: 5rem;
-  height: 2rem;
- position:relative;
-  margin: auto;
-  cursor: pointer;
-  padding-top: 1rem;
-  -webkit-animation: action 1s infinite  alternate;
-        animation: action 1s infinite  alternate;
-       @-webkit-keyframes action {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-10px); }
+
+  .arrow-up {
+    margin: 0 auto 2rem auto;
+    cursor: pointer;
+    animation: action 1s infinite alternate;
+    @-webkit-keyframes action {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
     }
     @keyframes action {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-10px); }
-}
- }
- 
-.fas{
-  color: rgb(32, 30, 30);
-  // margin-top: 1rem;
-  animation: MoveUpDown is linear infinite;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+  }
 
-.fas:hover{
-  color:rgb(107, 92, 92);
-  
+  .fas {
+    color: $font;
+    animation: MoveUpDown is linear infinite;
 
+    &:hover {
+      color: rgb(107, 92, 92);
+    }
+  }
 }
