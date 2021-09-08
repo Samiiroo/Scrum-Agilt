@@ -9,7 +9,7 @@ function Footer() {
   
   return (
     <footer>
-     <Anchor>
+     {/* <Anchor>
         <Link href="#landingpage" >
       <div className="arrow-up">
       
@@ -17,9 +17,14 @@ function Footer() {
     
       </div>
         </Link>
-      </Anchor>
-      <ul className="footer-list">
+      </Anchor> */}
+      <div className="arrow-up">
+        <i className="fas fa-angle-double-up fa-2x"></i>
        
+
+      </div>
+      <ul className="footer-list">
+  
         <li>
           <a href="#about">Om oss</a>
         </li>
