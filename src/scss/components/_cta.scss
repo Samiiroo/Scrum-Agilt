@@ -16,10 +16,9 @@
     text-decoration: none;
     transition: all;
     border: 1px solid hsl(0, 0%, 50%);
-      cursor: pointer;
-     border-radius: 10px; 
- 
-    //  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(50, 48, 48, 0.19);
+    cursor: pointer;
+    border-radius: 10px; 
+
   }
   .title {
     @include flex-columns-center;
