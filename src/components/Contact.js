@@ -6,18 +6,18 @@ function Contact(props) {
     return (
 
         <div className="grid-container">
-        <div className="icon-container">
-        <div className="icons">
+            <div className="icon-container">
+            <div className="icons">
              <div className="icon"> <i className="fas fa-map-marker-alt fa-2x"></i> </div>
-                <div className="box-text">Adress: Kattstigen 52A  26334 Helsingborg</div>
+                <div className="box-text">Adress:<br/>Kattstigen 52A<br/>26334 Helsingborg</div>
             </div>
             <div className="icons">
             <div className="icon"> <i className="fas fa-phone-alt fa-2x"></i></div>
-                <div className="box-text">Telefon: 042-333 12 52</div>
+                <div className="box-text">Telefon:<br/>042-333 12 52</div>
             </div>
             <div className="icons">
             <div className="icon"> <i className="fas fa-envelope fa-2x"></i></div>
-                <div className="box-text">E-postadress: Tamam@agile.se</div>
+                <div className="box-text">E-postadress:<br/>Tamam@agile.se</div>
             </div>
         </div>
         <div className="grid-container-contact">

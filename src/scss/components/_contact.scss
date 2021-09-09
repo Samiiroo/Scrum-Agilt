@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 body {
-	background-color: #d8e3e7;
+	background-color: rgb(30, 30, 40);
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
 	margin: auto;
@@ -29,19 +29,21 @@ body {
 }
 
 .icon {
-	background-color: #46b5d1;
+	background-color: #CC6666;
 	width: 4rem;
 	height: 3rem;
 	border-radius: 50%;
 	text-align: center;
 	padding-top: 0.5rem;
 	margin-left: 4rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
 .fas { 
 	color: white; 
 	padding-top: 0.3rem;
+	
 }
 
 
@@ -54,7 +56,8 @@ body {
 }
 
 .grid-contactform {
-	font-size: 1.5rem;
+	
+	font-size: 1.2rem;
 	font-weight: bold;
 	padding-left: 15rem;
 	padding-top: 3rem;
@@ -67,9 +70,10 @@ body {
 
 
 input[type=text], select, textarea {
+	background-color: transparent;
 	width: 30%;
 	padding: 1rem;
-	border: 0.1rem solid rgb(255, 255, 255);
+	border: 0.1rem solid rgb(204,102,102);
 	border-radius: 0.2rem;
 	box-sizing: border-box;
 	margin-top: 0.4rem;
@@ -78,7 +82,7 @@ input[type=text], select, textarea {
 }
 
 input[type=send] {
-	color: white;
+	color: rgb(255, 255, 255);
 	padding: 1rem 0.5rem;
 	border: none;
 	border-radius: 0.3rem;
@@ -86,32 +90,41 @@ input[type=send] {
 }
 
 .box-text {
-	margin-top: 1rem;
+	color:rgb(255, 255, 255);
+	margin-top: 1.5rem;
 	width: 12rem;
 	height: 4rem;
+	font-weight: bold;
 	
 }
 
 #message {
+	color:rgb(255, 255, 255);
+	font-weight: bolder;
 	width: 40rem;
 	height: 10rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #fname {
+	color:white;
 	width: 30rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #email {
+	color:white;
 	width: 30rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #subject {
+	color: white;
+	background-color: rgb(30, 30, 40);
 	width: 30rem;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 
 .button-send {
@@ -124,7 +137,7 @@ input[type=send] {
 	height: 3rem;
 	width: 7rem;
 	cursor: pointer;
-	background-color: #46b5d1;
+	background-color: #CC6666;
 	border-radius: 1rem;
 	color: white;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -139,5 +152,13 @@ input[type=send] {
 	max-width: 100%;
 	height: 40rem;
 	margin-right: 20rem;
+	
 }
 
+
+
+@media only screen and (max-width: 1400px) {
+.grid-imgbox {
+	display: none;
+}
+}
