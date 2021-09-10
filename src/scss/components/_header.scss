@@ -1,12 +1,27 @@
 @use "../abstracts/" as *;
+header{
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+    
+  }
 
-header {
+@media(width> 767px){
+& .mobile{
+  display: none; 
+  
+}
+& .desktop{
   height: 5rem;
   position: fixed;
   width: 100%;
   .logo {
     height: 3.9rem;
   }
+
+  
   @include grid33(true);
   justify-items: center;
   align-items: center;
@@ -46,4 +61,6 @@ header {
       }
     }
   }
+}
+}
 }

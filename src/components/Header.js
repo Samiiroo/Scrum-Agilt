@@ -5,14 +5,44 @@ import { Anchor } from "antd";
 
 const { Link } = Anchor;
 
-function Header(props) {
+function Header() {
+
+
+
   return (
-    <header>
-      <div>
+  <>
+    <header >
+      <div className="mobile">
+        <div className="topnav">
+          
+          <button className="btn-meny">Meny</button>
+        <div className="meny" style={{display:'none'}}>
+            <a href="/">
+              <img src="/assets/logo.png " alt="logo" className="logo-mobile" />
+            </a>
+            <Anchor targetOffset="80">
+              <ul className="nav-list">
+                <li className="nav-list-item">
+                  <Link href="#about" title="Om oss" />
+                </li>
+                <li className="nav-list-item">
+                  <Link href="#faq" title="Vanliga frågor" />
+                </li>
+                <li className="nav-list-item">
+                  <Link href="#contact" title="Kontakt" />
+                </li>
+              </ul>
+            </Anchor>
+     
+        </div>
+           
+
+      </div>
+      <div className="desktop">
+
         <a href="/">
           <img src="/assets/logo.png " alt="logo" className="logo" />
         </a>
-      </div>
       <nav className="nav-bar">
         <Anchor targetOffset="80">
           <ul className="nav-list">
@@ -46,8 +76,12 @@ function Header(props) {
           />
         </button>
       </div>
+      </div>
     </header>
+    
+    </>
   );
 }
+
 
 export default Header;
