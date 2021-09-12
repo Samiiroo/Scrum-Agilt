@@ -1,13 +1,4 @@
 {
-  "rest": [
-    {
-      "title": "Nyheter & Artiklar",
-      "news": "nyheter",
-      "article": "artiklar",
-      "latest": "senaste",
-      "oldest": "äldst"
-    }
-  ],
   "articles": [
     {
       "title": "Jordens IT jobb försvinner pga AI",

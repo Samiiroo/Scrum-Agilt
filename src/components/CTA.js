@@ -3,14 +3,18 @@ import '../scss/components/_cta.scss';
 import { Anchor } from 'antd';
 const { Link } = Anchor;
 
+import { useTranslation } from "react-i18next";
+
 function CTA(props) {
+
+  const { t } = useTranslation();
+
   return (
     <div className="cta">
-      <h2 className="title center">Vi designar din Hemsida från
-        <span>400 kr/tim</span>
-      </h2>
-       
-      <a href="#contact" type="button" className="btn btn-cta center">Kontakta oss</a> 
+      <h1 className="title center">{t('vi designar din hemsida från')}
+        <span>{t('400kr/tim')}</span>
+      </h1>
+      <a href="#contact" type="button" className="btn btn-cta center">{t('kontakta oss')}</a>
     </div>
   );
 }

@@ -4,7 +4,10 @@ import { Anchor } from 'antd';
 
 const { Link } = Anchor;
 
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation();
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
@@ -30,22 +33,26 @@ function Footer() {
       <Anchor targetOffset="80">
         <ul className="footer-list">
           <li>
-            <Link href="#about" title="Om oss" />
+            <Link href="#about" title={t('om oss')} />
           </li>
           
           <li>
-            <Link href="#faq" title="Vanliga frågor" />
+            <Link href="#faq" title={t('vanliga frågor')} />
           </li>
 
           <li>
-            <Link href="#contact" title="Kontakt" />
+            <Link href="#contact" title={t('kontakt')} />
+          </li>
+
+          <li>
+            <Link href="#article" title={t('Nyheter & Artiklar')} />
           </li>
 
         </ul>
 
       </Anchor>
 
-      <div className="copyright">Copyright: Inc.2021 all reserved</div>
+      <div className="copyright">Copyright: Inc.{ new Date().getFullYear().toString() } all reserved</div>
      
     </footer>
   )

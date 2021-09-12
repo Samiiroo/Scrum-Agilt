@@ -3,13 +3,24 @@ import '../scss/components/_faq.scss'
 import Axios from 'axios';
 import Loader from './Loader';
 
+import { useTranslation } from "react-i18next";
 
 function Faq() {
+
+	const { t, i18n } = useTranslation();
+
 	const [isMounted, updateIsMounted] = useState(true);
 	const [faqs, updateFAQ] = useState(null);
 
 	const FetchFAQ = async () => {
-		return await Axios.get('json/faq.json');
+		try{
+			let path = `json/faq-${i18n.language}.json`
+			const faqPosts = await Axios.get(path);
+			updateFAQ(faqPosts.data.faqs);
+		}
+		catch (err) {
+		console.error(err.message);
+		}
 	}
 
 
@@ -26,15 +37,16 @@ function Faq() {
 		if (!isMounted) {
 			return
 		}
-		FetchFAQ().then(res => {
-			updateFAQ(res.data.faqs)
-			updateIsMounted(false)
-		}).catch(err => console.error(err))
+		FetchFAQ()
+		i18n.on('languageChanged', lang => {
+			FetchFAQ();
+		})
+		updateIsMounted(false);
 	}, [])
 
 	return (
 		<section id="faq" className='faqs' style={{ background: `url('assets/img/faq-bg.png') no-repeat center/cover` }}>
-			<h2 className='title center'>Vanliga frågor</h2>
+			<h2 className='title center'>{t("vanliga frågor")}</h2>
 			{isMounted && <Loader />}
 			<div className="faq-container">
 				{faqs !== null && RenderFAQ()}

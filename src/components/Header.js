@@ -2,10 +2,18 @@ import React from "react";
 import "../scss/components/_header.scss";
 
 import { Anchor } from "antd";
-
 const { Link } = Anchor;
 
+import { useTranslation } from "react-i18next";
+
 function Header(props) {
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = lng => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
     <header>
       <div>
@@ -17,13 +25,13 @@ function Header(props) {
         <Anchor targetOffset="80">
           <ul className="nav-list">
             <li className="nav-list-item">
-              <Link href="#about" title="Om oss" />
+              <Link href="#about" title={t('om oss')} />
             </li>
             <li className="nav-list-item">
-              <Link href="#faq" title="Vanliga frågor" />
+              <Link href="#faq" title={t('vanliga frågor')} />
             </li>
             <li className="nav-list-item">
-              <Link href="#contact" title="Kontakt" />
+              <Link href="#contact" title={t('kontakt')} />
             </li>
           </ul>
         </Anchor>
@@ -34,7 +42,7 @@ function Header(props) {
             className="swedish-symbol"
             src="/assets/se.png"
             alt="svenska"
-            onClick={() => localStorage.setItem("language", "sv")}
+            onClick={() => changeLanguage('sv')}
           />
         </button>
         <button>
@@ -42,7 +50,7 @@ function Header(props) {
             className="english-symbol"
             src="/assets/uk.png"
             alt="english"
-            onClick={() => localStorage.setItem("language", "en")}
+            onClick={() => changeLanguage('en')}
           />
         </button>
       </div>
