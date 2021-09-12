@@ -1,13 +1,4 @@
 {
-  "rest": [
-    {
-      "title": "News & Articles",
-      "news": "news",
-      "article": "article",
-      "latest": "latest",
-      "oldest": "oldest"
-    }
-  ],
   "articles": [
     {
       "title": "Earths IT jobbs are disappearing cause of AI",
@@ -21,6 +12,7 @@
     },
     {
       "title": "Earths IT jobbs are disappearing cause of AI - part 2",
+      "readmore": "read more...",
       "tags": [
         "news",
         "article"
@@ -30,6 +22,7 @@
     },
     {
       "title": "Why people jumping off the Rails train?",
+      "readmore": "read more...",
       "tags": [
         "article"
       ],
@@ -38,6 +31,7 @@
     },
     {
       "title": "PHP 8.0 out now!",
+      "readmore": "read more...",
       "tags": [
         "article"
       ],
@@ -46,6 +40,7 @@
     },
     {
       "title": "Doctor Who S13 out now",
+      "readmore": "read more...",
       "tags": [
         "article"
       ],
