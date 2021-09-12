@@ -9,7 +9,7 @@ function Contact(props) {
 
     return (
 
-        <div className="grid-container">
+        <div className="grid-container" id="contact">
         <div className="icon-container">
         <div className="icons">
              <div className="icon"> <i className="fas fa-map-marker-alt fa-2x"></i> </div>
@@ -27,9 +27,9 @@ function Contact(props) {
         <div className="grid-container-contact">
             <div className="grid-contactform">
                 <label for="fullname">{t('för- och efternamn')}</label>
-                <input type="text" id="fname" name="fullname" placeholder="Namn"></input>
+                <input type="text" id="fname" name="fullname" placeholder={t('namn')}></input>
                 <label for="email">{t('e-post')}</label>
-            <input type="text" id="email" name="email" placeholder="E-postadress"></input>
+            <input type="text" id="email" name="email" placeholder={t('e-post')}></input>
             <label for="subject">{t('ämne')}</label>
             <select id="subject" name="Ämne">
                 <option value="Produktfråga">{t('produkt')}</option>

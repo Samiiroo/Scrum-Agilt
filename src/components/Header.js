@@ -2,12 +2,11 @@ import React from "react";
 import "../scss/components/_header.scss";
 
 import { Anchor } from "antd";
-const { Link } = Anchor;
-
 import { useTranslation } from "react-i18next";
 
 function Header(props) {
 
+  const { Link } = Anchor;
   const { t, i18n } = useTranslation();
 
   const changeLanguage = lng => {
@@ -32,6 +31,9 @@ function Header(props) {
             </li>
             <li className="nav-list-item">
               <Link href="#contact" title={t('kontakt')} />
+            </li>
+            <li>
+            <Link href="#article" title={t('Nyheter & Artiklar')} />
             </li>
           </ul>
         </Anchor>

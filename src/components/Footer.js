@@ -1,12 +1,11 @@
 import React,{useState}from 'react';
 import '../scss/components/_footer.scss';
 import { Anchor } from 'antd';
-
-const { Link } = Anchor;
-
 import { useTranslation } from "react-i18next";
 
 function Footer() {
+  
+  const { Link } = Anchor;
   const { t } = useTranslation();
   const [showScroll, setShowScroll] = useState(false);
 

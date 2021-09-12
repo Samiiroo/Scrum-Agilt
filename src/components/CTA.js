@@ -1,12 +1,9 @@
 import React from 'react';
 import '../scss/components/_cta.scss';
-import { Anchor } from 'antd';
-const { Link } = Anchor;
-
 import { useTranslation } from "react-i18next";
 
 function CTA(props) {
-
+  
   const { t } = useTranslation();
 
   return (
