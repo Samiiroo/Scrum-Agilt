@@ -12,7 +12,7 @@ function Contact(props) {
         <div className="grid-container" id="contact">
             <div className="icon-container">
                 <div className="icons">
-                    <div className="icon"> <i className="fa-solid fa-cog fa-spin fa-spin-reverse"></i> </div>
+                    <div className="icon"> <i className="fas fa-map-marker-alt fa-2x"></i> </div>
                     <div className="box-text">{t('adress')}: Kattstigen 52A  26334 Helsingborg</div>
                 </div>
                 <div className="icons">
