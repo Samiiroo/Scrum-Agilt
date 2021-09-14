@@ -10,7 +10,7 @@ i18n
   .use(initReactI18next)
   .use(LangueDetector)
   .init({
-    supportedLngs: ['en', 'sv'],
+    supportedLngs: ['sv', 'en'],
     fallbackLng: 'sv',
     resources: {
       sv: {
@@ -20,17 +20,18 @@ i18n
         translations: translationEN
       }
     },
-    detection: {
-        order: ['cookie', 'localStorage', 'sessionStorage', 'htmlTag'],
-        caches: ['cookie']
-    },
+    // detection: {
+    //   order: ['cookie', 'localStorage', 'sessionStorage', 'htmlTag'],
+    //   caches: ['cookie']
+    // },
     ns: ["translations"],
     defaultNS: "translations",
-    react: { useSuspense: false,
-             bindI18n: "languageChanged"
-           },
+    react: {
+      useSuspense: false,
+      bindI18n: "languageChanged"
+    },
 
-    
+
   });
 
 

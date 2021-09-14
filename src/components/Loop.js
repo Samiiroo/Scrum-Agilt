@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 function Loop(props) {
 
+  const { t } = useTranslation();
   let ListOfArticles = props.articles;
 
   const displayLoop = () => {
@@ -24,16 +26,16 @@ function Loop(props) {
 
     if (props.filter === 'news') {
       filter = ListOfArticles.filter((article, key) => {
-        return article.tags[0] === "nyheter";
+        return article.tags[0] === t('nyheter');
       });
     }
     else if (props.filter === 'articles') {
       filter = ListOfArticles.filter((article, key) => {
         if (article.tags.length < 2) {
-          return article.tags[0] === "artikel";
+          return article.tags[0] === t('artikel');
         }
         else {
-          return article.tags[1] === "artikel";
+          return article.tags[1] === t('artikel');
         }
       });
     }
